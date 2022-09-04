@@ -47,7 +47,15 @@ public class FirstMate {
     }
 
     public static String getToken() {
-        Dotenv dotenv = Dotenv.load();
-        return dotenv.get("BOT_TOKEN");
+        Dotenv dotenv;
+
+        try {
+            dotenv = Dotenv.load();
+            return dotenv.get("BOT_TOKEN");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Do you have a .env file with the BOT_TOKEN key?");
+            return "";
+        }
     }
 }
