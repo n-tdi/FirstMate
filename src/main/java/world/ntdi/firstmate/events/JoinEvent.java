@@ -19,6 +19,6 @@ public class JoinEvent extends ListenerAdapter {
             LOGGER.error("Unable to find CREWMATE role!");
         }
 
-        e.getGuild().getDefaultChannel().sendMessage(e.getUser().getAsMention() + " has boarded **Row's Boat**").queue();
+        e.getGuild().getDefaultChannel().asTextChannel().sendMessage(e.getUser().getAsMention() + " has boarded **Row's Boat**").queue();
     }
 }

@@ -34,7 +34,7 @@ public class FirstMate {
                 .disableCache(CacheFlag.VOICE_STATE)
                 .setBulkDeleteSplittingEnabled(false)
                 .setChunkingFilter(ChunkingFilter.ALL)
-                .enableIntents(GatewayIntent.GUILD_MEMBERS)
+                .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_MESSAGES)
                 .setMemberCachePolicy(MemberCachePolicy.ALL)
                 .addEventListeners(
                         new JoinEvent(),
